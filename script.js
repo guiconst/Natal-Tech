@@ -10,7 +10,7 @@
 // Define uma data futura (3 dias a partir de agora) e
 // atualiza os números na tela a cada segundo.
 const countdownDate = new Date();
-countdownDate.setDate(countdownDate.getDate() + 3);
+countdownDate.setDate(countdownDate.getDate() + 37);
 countdownDate.setHours(23, 59, 59, 999);
 
 function updateCountdown() {
@@ -228,12 +228,74 @@ async function loadProducts() {
   // ---------------------------------
 
   // Produtos de demonstração (fallback)
-  const mockProducts = [
-    { name: 'Smartphone Premium', old_price: 3999, new_price: 1199, emoji: '📱' },
-    { name: 'Notebook Ultra', old_price: 5999, new_price: 2399, emoji: '💻' },
-    { name: 'Fone Bluetooth', old_price: 899, new_price: 314, emoji: '🎧' }
-  ];
-
+  const produtosNatal = [
+  {
+    id: 1,
+    nome: "Panetone Trufado Premium",
+    descricao: "Panetone artesanal recheado com trufa de chocolate belga",
+    preco: 89.90,
+    precoAntigo: 129.90,
+    desconto: 31,
+    imagemUrl: "🎂", // Emoji como placeholder
+    categoria: "Alimentos",
+    estoque: 50
+  },
+  {
+    id: 2,
+    nome: "Luzes de Natal LED 100 Lâmpadas",
+    descricao: "Pisca-pisca LED multicolorido com 8 modos de iluminação",
+    preco: 49.90,
+    precoAntigo: 89.90,
+    desconto: 44,
+    imagemUrl: "💡", // Emoji como placeholder
+    categoria: "Decoração",
+    estoque: 120
+  },
+  {
+    id: 3,
+    nome: "Árvore de Natal 1.80m",
+    descricao: "Árvore artificial com galhos densos e suporte metálico resistente",
+    preco: 299.90,
+    precoAntigo: 599.90,
+    desconto: 50,
+    imagemUrl: "🎄", // Emoji como placeholder
+    categoria: "Decoração",
+    estoque: 35
+  },
+  {
+    id: 4,
+    nome: "Kit Decoração 50 Bolas Natalinas",
+    descricao: "Conjunto com 50 bolas decorativas em cores sortidas e acabamento brilhante",
+    preco: 79.90,
+    precoAntigo: 159.90,
+    desconto: 50,
+    imagemUrl: "🔴", // Emoji como placeholder
+    categoria: "Decoração",
+    estoque: 80
+  },
+  {
+    id: 5,
+    nome: "Presente Surpresa Premium",
+    descricao: "Caixa misteriosa com produtos selecionados no valor de até R$ 500",
+    preco: 199.90,
+    precoAntigo: 399.90,
+    desconto: 50,
+    imagemUrl: "🎁", // Emoji como placeholder
+    categoria: "Presentes",
+    estoque: 25
+  },
+  {
+    id: 6,
+    nome: "Presépio Completo Luxo",
+    descricao: "Presépio com 15 peças em resina pintadas à mão",
+    preco: 159.90,
+    precoAntigo: 299.90,
+    desconto: 47,
+    imagemUrl: "⭐", // Emoji como placeholder
+    categoria: "Decoração",
+    estoque: 40
+  },
+];
   // Consultar diretamente do Supabase
   // Explicação:
   // - `window.supabase` vem do SDK carregado no index.html
